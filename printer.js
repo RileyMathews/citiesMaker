@@ -9,6 +9,7 @@ const article = document.querySelector("#article")
         <h3>CITY</h3>
         <img src=database.cities[i].image>
         <p>YEAR VISISTED</p>
+        <h5>attractions</h5>
         <ul>
             <li>attraction 1</li>
             ...
@@ -19,6 +20,23 @@ const article = document.querySelector("#article")
 database.cities.forEach(city => {
     console.log(city.name)
     let section = document.createElement('section')
+
+    //assign class based on continent
+    if (city.continent === "north america") {
+        section.classList = "na"
+    } else if (city.continent === "south america") {
+        section.classList = "sa"
+    } else if (city.continent === "asia") {
+        section.classList = "asia"
+    } else if (city.continent === "antarctica") {
+        section.classList = "antarctica"
+    } else if (city.continent === "europe") {
+        section.classList = "europe"
+    } else if (city.continent === "africa") {
+        section.classList = "africa"
+    } else if (city.continent === "australia") {
+        section.classList = "australia"
+    }    
 
     //create heading
     let heading = document.createElement('h3')
@@ -35,6 +53,11 @@ database.cities.forEach(city => {
     let p = document.createElement('p')
     p.textContent = 'Visited in: ' + city.visited
     section.appendChild(p)
+
+    //list header element
+    let listHeading = document.createElement('h5')
+    listHeading.textContent = 'Attractions:'
+    section.appendChild(listHeading)
 
     //create list element
     let list = document.createElement('ul')

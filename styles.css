@@ -1,0 +1,42 @@
+* {
+    font-family: arial;
+}
+
+h3 {
+    font-size: 2.5em;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+
+
+section {
+    display: inline-block;
+    border: 2px solid black;
+    margin: 0 1em 1em 0;
+    padding: 1em;
+}
+
+.na {
+    border: 2px solid green;
+}
+.sa {
+    border: 2px solid blue;
+}
+.asia {
+    border: 2px solid purple;
+}
+.antarctica {
+    border: 2px solid yellow;
+}
+.europe {
+    border: 2px solid orange;
+}
+.africa {
+    border: 2px solid red;
+}
+.australia {
+    border: 2px solid brown;
+}
