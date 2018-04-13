@@ -18,4 +18,37 @@ const article = document.querySelector("#article")
 
 database.cities.forEach(city => {
     console.log(city.name)
+    let div = document.createElement('div')
+
+    //create heading
+    let heading = document.createElement('h3')
+    heading.textContent = city.name
+    div.appendChild(heading)
+
+    //create image
+    let img = document.createElement('img')
+    img.setAttribute('src', city.image)
+    img.setAttribute('height', '200')
+    div.appendChild(img)
+
+    //create year visited element
+    let p = document.createElement('p')
+    p.textContent = 'Visited in: ' + city.visited
+    div.appendChild(p)
+
+    //create list element
+    let list = document.createElement('ul')
+    city.attractions.forEach(element => {
+        let item = document.createElement('li')
+        item.textContent = element
+        list.appendChild(item)
+    });
+    div.appendChild(list)
+
+
+
+
+
+    //add finished city component to article
+    article.appendChild(div)
 });
