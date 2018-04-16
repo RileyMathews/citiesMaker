@@ -2,6 +2,7 @@
 
 //obtain ref to article element
 const article = document.querySelector("#article")
+const fragment = document.createDocumentFragment()
 
 /*
     Structure of city components...
@@ -70,10 +71,11 @@ const printCities = year => {
             });
             section.appendChild(list)
         
-            //add finished city component to article
-            article.appendChild(section)
+            //add finished city component to fragment
+            fragment.appendChild(section)
         }
     });
+    article.appendChild(fragment)
 }
 
 printCities()
